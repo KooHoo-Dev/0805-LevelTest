@@ -17,5 +17,4 @@ public class Quiz1
     {
         throw new NotImplementedException();
     }
-    
 }
