@@ -48,7 +48,15 @@ class Program
         //Quiz5
         {
             Console.WriteLine("==============Quiz5================");
-            Quiz5.TextBattle();
+            
+            try
+            {
+                Quiz5.TextBattle();
+            }
+            catch (NotImplementedException)
+            {
+                Console.WriteLine("Quiz5 함수가 구현되지 않았습니다.");
+            }
         }
         
         //Quiz6
