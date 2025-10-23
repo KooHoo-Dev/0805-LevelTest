@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace LevelTest;
 
 public class Quiz6
@@ -31,8 +33,26 @@ public class Quiz6
     //
     // 총 이동 횟수: 7
 
+
+    //내 위에 녀석 들을 빈 기둥으로 옮긴다.
+    //나를 목표 기둥으로 옮기고
+    //빈 기둥으로 옮긴 녀석들을 목표 기둥으로 옮긴다
+
     public static int RunHanoi(int n, string start, string goal, string temp)
     {
-        throw new NotImplementedException();
+        int totalCount = 0;
+
+        if(n == 1)
+        {
+            Console.WriteLine($"{n}을 {start} => {goal}");
+            return 1;
+        }
+
+        totalCount += RunHanoi(n - 1, start, temp, goal);
+        Console.WriteLine($"{n}을 {start} => {goal}");
+        totalCount++;
+        totalCount += RunHanoi(n - 1, temp, goal, start);
+
+        return totalCount;
     }
 }

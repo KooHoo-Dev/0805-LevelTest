@@ -11,16 +11,16 @@ public class Quiz0
     // 코드를 수정하여 컴파일 에러, 반복문이 실행되지 않는 문제를 해결하세요.
     public static void SumPrinter(int n)
     {
-        console.WriteLine("\n--- 누적합 출력기 ---");
+        Console.WriteLine("\n--- 누적합 출력기 ---");
 
         int sum = 0;
 
-        for (int i = 1; i <= n; i++) ;
+        for (int i = 1; i <= n; i++)
         {
-            int sum += i;
+            sum += i;
         }
 
-        Console.writeline($"1부터 {n}까지의 누적 합은 {sum}입니다.");
+        Console.WriteLine($"1부터 {n}까지의 누적 합은 {sum}입니다.");
     }
     
     

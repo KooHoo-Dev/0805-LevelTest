@@ -18,6 +18,26 @@ public class Quiz4
 
     public static int SumRange(int startNum ,int endNum)
     {
-        throw new NotImplementedException();
+        //예외 처리 startNum과 endNum이 같을때
+        if (startNum == endNum) return startNum + endNum;
+
+        int minNumber = startNum;
+        int maxNumber = endNum;
+
+        //예외 처리 : startNumber가 endNumber보다 클 경우
+        if (startNum > endNum)
+        {
+            minNumber = endNum;
+            maxNumber = startNum;
+        }
+
+        int sum = 0;
+
+        for(int i = minNumber; i <= maxNumber; ++i)
+        {
+            sum += i;
+        }
+
+        return sum;
     }
 }

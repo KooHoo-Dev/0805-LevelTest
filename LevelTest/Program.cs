@@ -6,6 +6,12 @@ class Program
 {
     static void Main(string[] args)
     {
+        int number = 100;
+        int result = Quiz6.RunHanoi(number, "A", "C", "B");
+
+        Console.WriteLine($"이동횟수는 {result} 입니다");
+        return;
+
         //Quiz1
         {
             Console.WriteLine("==============Quiz1================");
@@ -41,7 +47,7 @@ class Program
             Console.WriteLine("==============Quiz4================");
             int[] startNums = new int[] { 1, 5, 10, 0, -5 };
             int[] endNums = new int[] { 5, 1, 10, 0, 5 };
-            int[] answerCases = new int[] { 15, 15, 0, 0, 0 }; 
+            int[] answerCases = new int[] { 15, 15, 20, 0, 0 }; 
             CheckQuiz4(startNums, endNums, answerCases);
         }
 
@@ -62,8 +68,8 @@ class Program
         //Quiz6
         {
             Console.WriteLine("==============Quiz6================");
-            int[] testCases = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            int[] answerCases = new int[] { 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023 };
+            int[] testCases = new int[] { 15, 16, 17, 18, 19, 20, 21 };
+            int[] answerCases = new int[] { 32767, 65535, 131071, 262143, 524287, 1048575, 2097151 };
             
             CheckQuiz6(testCases, answerCases);
         }
@@ -162,12 +168,12 @@ class Program
         {
             for (int i = 0; i < n.Length; i++)
             {
-                int answer = Quiz6.RunHanoi(n[i], "A", "B", "C");
+                int answer = Quiz6.RunHanoi(n[i], "A", "C", "B");
                 bool isCorrect = answer.Equals(answerCases[i]);
                 string message = GetAnswerMessage(isCorrect);
                 
                 SelectColor(isCorrect);
-                Console.WriteLine($"Quiz 64: 케이스 {i}, n = {n[i]}, return = {answer}, {message} ");
+                Console.WriteLine($"Quiz 6: 케이스 {i}, n = {n[i]}, return = {answer}, {message} ");
                 Console.ResetColor();
             }
         }

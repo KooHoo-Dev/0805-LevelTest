@@ -1,4 +1,6 @@
-﻿namespace LevelTest;
+﻿using System.ComponentModel.Design;
+
+namespace LevelTest;
 
 public class Quiz1
 {
@@ -15,6 +17,7 @@ public class Quiz1
 
     public static string GetDayType(string dayOfWeek)
     {
-        throw new NotImplementedException();
+        if (dayOfWeek == "토요일" || dayOfWeek == "일요일") return "휴일";
+        else return "평일";
     }
 }
