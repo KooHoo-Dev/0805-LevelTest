@@ -6,11 +6,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        int number = 100;
-        int result = Quiz6.RunHanoi(number, "A", "C", "B");
-
-        Console.WriteLine($"이동횟수는 {result} 입니다");
-        return;
+        // int number = 100;
+        // int result = Quiz6.RunHanoi(number, "A", "C", "B");
+        //
+        // Console.WriteLine($"이동횟수는 {result} 입니다");
+        // return;
 
         //Quiz1
         {
@@ -72,6 +72,172 @@ class Program
             int[] answerCases = new int[] { 32767, 65535, 131071, 262143, 524287, 1048575, 2097151 };
             
             CheckQuiz6(testCases, answerCases);
+        }
+        
+        //Quiz7
+        {
+            Console.WriteLine("==============Quiz7================");
+            int[][] testCases = { new int[] { 3, 8, 1, 9, 4 }, new int[] { -1, -5, -3 }, new int[] { } };
+            int[] answerCases = { 9, -1, 0 };
+            CheckQuiz7(testCases, answerCases);
+        }
+
+        //Quiz8
+        {
+            Console.WriteLine("==============Quiz8================");
+            int[][] testCases = { new int[] { 3, 8, 1, 9, 4 }, new int[] { -1, -5, -3 }, new int[] { } };
+            int[] answerCases = { 1, -5, 0 };
+            CheckQuiz8(testCases, answerCases);
+        }
+
+        //Quiz9
+        {
+            Console.WriteLine("==============Quiz9================");
+            int[][] testCases = { new int[] { 1, 2, 3, 4, 5 }, new int[] { 10, 20, 30 }, new int[] { } };
+            double[] answerCases = { 3.0, 20.0, 0.0 };
+            CheckQuiz9(testCases, answerCases);
+        }
+
+        //Quiz10
+        {
+            Console.WriteLine("==============Quiz10================");
+            int[][] testCases = { new int[] { 1, -2, 3, -4, 5 }, new int[] { -1, -2, -3 }, new int[] { } };
+            int[] answerCases = { 3, 0, 0 };
+            CheckQuiz10(testCases, answerCases);
+        }
+
+        //Quiz11
+        {
+            Console.WriteLine("==============Quiz11================");
+            int[] testCases = { 5, 1, 0 };
+            string[] answerCases = { "1,2,3,4,5", "1", "" };
+            CheckQuiz11(testCases, answerCases);
+        }
+
+        //Quiz12
+        {
+            Console.WriteLine("==============Quiz12================");
+            int[] testCases = { 15 };
+            string[][] answerCases = { new string[] { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz" } };
+            CheckQuiz12(testCases, answerCases);
+        }
+
+        //Quiz13
+        {
+            Console.WriteLine("==============Quiz13================");
+            int[][] testCases = { new int[] { 1, 2, 3, 4, 5 }, new int[] { } };
+            int[][] answerCases = { new int[] { 5, 4, 3, 2, 1 }, new int[] { } };
+            CheckQuiz13(testCases, answerCases);
+        }
+
+        //Quiz14
+        {
+            Console.WriteLine("==============Quiz14================");
+            int[][] testCases = { new int[] { 1, 2, 3, 4, 5 }, new int[] { 1, 2, 3, 4, 5 } };
+            int[] targets = { 3, 6 };
+            bool[] answerCases = { true, false };
+            CheckQuiz14(testCases, targets, answerCases);
+        }
+
+        //Quiz15
+        {
+            Console.WriteLine("==============Quiz15================");
+            int[] testCases = { 5, 0 };
+            long[] answerCases = { 120, 1 };
+            CheckQuiz15(testCases, answerCases);
+        }
+
+        //Quiz16
+        {
+            Console.WriteLine("==============Quiz16================");
+            int[] testCases = { 7, 10, 1 };
+            bool[] answerCases = { true, false, false };
+            CheckQuiz16(testCases, answerCases);
+        }
+
+        //Quiz17
+        {
+            Console.WriteLine("==============Quiz17================");
+            int[][] testCases1 = { new int[] { 1, 3, 5 }, new int[] { 1, 2 } };
+            int[][] testCases2 = { new int[] { 2, 4, 6 }, new int[] { 3, 4 } };
+            int[][] answerCases = { new int[] { 1, 2, 3, 4, 5, 6 }, new int[] { 1, 2, 3, 4 } };
+            CheckQuiz17(testCases1, testCases2, answerCases);
+        }
+
+        //Quiz18
+        {
+            Console.WriteLine("==============Quiz18================");
+            string[] testCasesStr = { "hello world", "programming" };
+            char[] testCasesChar = { 'l', 'P' };
+            int[] answerCases = { 3, 0 };
+            CheckQuiz18(testCasesStr, testCasesChar, answerCases);
+        }
+
+        //Quiz19
+        {
+            Console.WriteLine("==============Quiz19================");
+            string[][] testCases = { new string[] { "apple", "banana", "cherry" }, new string[] { "a", "b", "c" } };
+            string[] targets = { "banana", "d" };
+            int[] answerCases = { 1, -1 };
+            CheckQuiz19(testCases, targets, answerCases);
+        }
+
+        //Quiz20
+        {
+            Console.WriteLine("==============Quiz20================");
+            int[] testCases = { 3, 5 };
+            string[][] answerCases = { new string[] { "*", "**", "***" }, new string[] { "*", "**", "***", "****", "*****" } };
+            CheckQuiz20(testCases, answerCases);
+        }
+
+        //Quiz21
+        {
+            Console.WriteLine("==============Quiz21================");
+            int[][] testCases = { new int[] { 1, 2, 3, 4, 5 }, new int[] { 10, 20, 30 } };
+            int[] ks = { 2, 1 };
+            int[][] answerCases = { new int[] { 4, 5, 1, 2, 3 }, new int[] { 30, 10, 20 } };
+            CheckQuiz21(testCases, ks, answerCases);
+        }
+
+        //Quiz22
+        {
+            Console.WriteLine("==============Quiz22================");
+            string[] testCases = { "apple,banana,cherry", "one two three" };
+            char[] delimiters = { ',', ' ' };
+            string[][] answerCases = { new string[] { "apple", "banana", "cherry" }, new string[] { "one", "two", "three" } };
+            CheckQuiz22(testCases, delimiters, answerCases);
+        }
+
+        //Quiz23
+        {
+            Console.WriteLine("==============Quiz23================");
+            int[][] testCases = { new int[] { 1, 2, 3, 4, 5, 6 }, new int[] { 1, 3, 5 } };
+            int[][] answerCases = { new int[] { 2, 4, 6 }, new int[] { } };
+            CheckQuiz23(testCases, answerCases);
+        }
+
+        //Quiz24
+        {
+            Console.WriteLine("==============Quiz24================");
+            int[][,] testCases = { new int[,] { { 1, 2 }, { 3, 4 } }, new int[,] { { 10 } } };
+            int[] answerCases = { 10, 10 };
+            CheckQuiz24(testCases, answerCases);
+        }
+
+        //Quiz25
+        {
+            Console.WriteLine("==============Quiz25================");
+            string[] testCases = { "level", "hello", "Racecar" };
+            bool[] answerCases = { true, false, true };
+            CheckQuiz25(testCases, answerCases);
+        }
+
+        //Quiz26
+        {
+            Console.WriteLine("==============Quiz26================");
+            int[] testCases = { 10, 20 };
+            int[] answerCases = { 23, 78 };
+            CheckQuiz26(testCases, answerCases);
         }
     }
 
@@ -180,6 +346,426 @@ class Program
         catch (NotImplementedException)
         {
             Console.WriteLine("Quiz6 함수가 구현되지 않았습니다.");
+        }
+    }
+    
+    private static void CheckQuiz7(int[][] testCases, int[] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz7.FindMax(testCases[i]);
+                bool isCorrect = answer.Equals(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 7: 케이스 {i}, testCase = {{{string.Join(",", testCases[i])}}}, return = {answer}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz7 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz8(int[][] testCases, int[] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz8.FindMin(testCases[i]);
+                bool isCorrect = answer.Equals(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 8: 케이스 {i}, testCase = {{{string.Join(",", testCases[i])}}}, return = {answer}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz8 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz9(int[][] testCases, double[] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz9.CalculateAverage(testCases[i]);
+                bool isCorrect = answer.Equals(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 9: 케이스 {i}, testCase = {{{string.Join(",", testCases[i])}}}, return = {answer}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz9 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz10(int[][] testCases, int[] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz10.CountPositiveNumbers(testCases[i]);
+                bool isCorrect = answer.Equals(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 10: 케이스 {i}, testCase = {{{string.Join(",", testCases[i])}}}, return = {answer}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz10 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz11(int[] testCases, string[] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz11.CreateNumberString(testCases[i]);
+                bool isCorrect = answer.Equals(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 11: 케이스 {i}, testCase = {testCases[i]}, return = \"{answer}\", {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz11 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz12(int[] testCases, string[][] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz12.FizzBuzz(testCases[i]);
+                bool isCorrect = answer.SequenceEqual(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 12: 케이스 {i}, testCase = {testCases[i]}, return = {{{string.Join(",", answer)}}}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz12 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz13(int[][] testCases, int[][] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz13.ReverseArray(testCases[i]);
+                bool isCorrect = answer.SequenceEqual(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 13: 케이스 {i}, testCase = {{{string.Join(",", testCases[i])}}}, return = {{{string.Join(",", answer)}}}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz13 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz14(int[][] testCases, int[] targets, bool[] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz14.ContainsValue(testCases[i], targets[i]);
+                bool isCorrect = answer.Equals(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 14: 케이스 {i}, testCase = {{{string.Join(",", testCases[i])}}}, target = {targets[i]}, return = {answer}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz14 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz15(int[] testCases, long[] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz15.Factorial(testCases[i]);
+                bool isCorrect = answer.Equals(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 15: 케이스 {i}, testCase = {testCases[i]}, return = {answer}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz15 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz16(int[] testCases, bool[] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz16.IsPrime(testCases[i]);
+                bool isCorrect = answer.Equals(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 16: 케이스 {i}, testCase = {testCases[i]}, return = {answer}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz16 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz17(int[][] testCases1, int[][] testCases2, int[][] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases1.Length; i++)
+            {
+                var answer = Quiz17.MergeSortedArrays(testCases1[i], testCases2[i]);
+                bool isCorrect = answer.SequenceEqual(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 17: 케이스 {i}, testCase1 = {{{string.Join(",", testCases1[i])}}}, testCase2 = {{{string.Join(",", testCases2[i])}}}, return = {{{string.Join(",", answer)}}}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz17 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz18(string[] testCasesStr, char[] testCasesChar, int[] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCasesStr.Length; i++)
+            {
+                var answer = Quiz18.CountCharacter(testCasesStr[i], testCasesChar[i]);
+                bool isCorrect = answer.Equals(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 18: 케이스 {i}, str = \"{testCasesStr[i]}\", ch = '{testCasesChar[i]}', return = {answer}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz18 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz19(string[][] testCases, string[] targets, int[] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz19.FindIndex(testCases[i], targets[i]);
+                bool isCorrect = answer.Equals(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 19: 케이스 {i}, testCase = {{{string.Join(",", testCases[i])}}}, target = \"{targets[i]}\", return = {answer}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz19 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz20(int[] testCases, string[][] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz20.PrintTriangle(testCases[i]);
+                bool isCorrect = answer.SequenceEqual(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 20: 케이스 {i}, testCase = {testCases[i]}, return = {{{string.Join(",", answer.Select(s => $"\"{s}\""))}}}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz20 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz21(int[][] testCases, int[] ks, int[][] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz21.RotateArray(testCases[i], ks[i]);
+                bool isCorrect = answer.SequenceEqual(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 21: 케이스 {i}, testCase = {{{string.Join(",", testCases[i])}}}, k = {ks[i]}, return = {{{string.Join(",", answer)}}}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz21 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz22(string[] testCases, char[] delimiters, string[][] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz22.SplitString(testCases[i], delimiters[i]);
+                bool isCorrect = answer.SequenceEqual(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 22: 케이스 {i}, testCase = \"{testCases[i]}\", delimiter = '{delimiters[i]}', return = {{{string.Join(",", answer.Select(s => $"\"{s}\""))}}}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz22 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz23(int[][] testCases, int[][] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz23.RemoveOddNumbers(testCases[i]);
+                bool isCorrect = answer.SequenceEqual(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 23: 케이스 {i}, testCase = {{{string.Join(",", testCases[i])}}}, return = {{{string.Join(",", answer)}}}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz23 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz24(int[][,] testCases, int[] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz24.Sum2DArray(testCases[i]);
+                bool isCorrect = answer.Equals(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 24: 케이스 {i}, return = {answer}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz24 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz25(string[] testCases, bool[] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz25.IsPalindrome(testCases[i]);
+                bool isCorrect = answer.Equals(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 25: 케이스 {i}, testCase = \"{testCases[i]}\", return = {answer}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz25 함수가 구현되지 않았습니다.");
+        }
+    }
+
+    private static void CheckQuiz26(int[] testCases, int[] answerCases)
+    {
+        try
+        {
+            for (int i = 0; i < testCases.Length; i++)
+            {
+                var answer = Quiz26.SumMultiplesOf3And5(testCases[i]);
+                bool isCorrect = answer.Equals(answerCases[i]);
+                string message = GetAnswerMessage(isCorrect);
+
+                SelectColor(isCorrect);
+                Console.WriteLine($"Quiz 26: 케이스 {i}, testCase = {testCases[i]}, return = {answer}, {message}");
+                Console.ResetColor();
+            }
+        }
+        catch (NotImplementedException)
+        {
+            Console.WriteLine("Quiz26 함수가 구현되지 않았습니다.");
         }
     }
 }
