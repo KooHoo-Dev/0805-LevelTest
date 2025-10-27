@@ -17,13 +17,6 @@ public class Quiz3
     // 짝수는 2개이므로 결과: 2
     public static int CountEvenNumber(int[] numbers)
     {
-        int reVal = 0;
-
-        for(int i = 0; i < numbers.Length; ++i)
-        {
-            if (numbers[i] % 2 == 0) reVal += 1; // reval = reval + 1; 이것과 같다.
-        }
-
-        return reVal;
+        throw new NotImplementedException();
     }
 }

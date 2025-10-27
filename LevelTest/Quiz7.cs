@@ -3,19 +3,20 @@ namespace LevelTest;
 
 public class Quiz7
 {
-    // Quiz 7: 배열의 최댓값 찾기
+    // Quiz 20: 별 찍기 - 삼각형
     //
     // 문제 설명:
-    // 정수 배열 `numbers`가 주어집니다.
-    // 배열의 요소 중에서 가장 큰 값을 찾아 반환하는 함수를 작성하세요.
-    // 만약 배열이 비어있다면 0을 반환하세요.
+    // 정수 `height`가 주어집니다.
+    // 높이가 `height`인 직각삼각형 모양으로 별(*)을 찍어 문자열 배열로 반환하는 함수를 작성하세요.
     //
     // 예시:
-    // 입력: new int[] { 3, 8, 1, 9, 4 } → 반환: 9
-    // 입력: new int[] { -1, -5, -3 } → 반환: -1
-    // 입력: new int[] { } → 반환: 0
+    // 입력: 3
+    // 반환: new string[] { "*", "**", "***" }
+    //
+    // 입력: 5
+    // 반환: new string[] { "*", "**", "***", "****", "*****" }
 
-    public static int FindMax(int[] numbers)
+    public static string[] PrintTriangle(int height)
     {
         throw new NotImplementedException();
     }

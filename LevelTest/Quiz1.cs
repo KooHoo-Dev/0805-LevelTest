@@ -17,7 +17,6 @@ public class Quiz1
 
     public static string GetDayType(string dayOfWeek)
     {
-        if (dayOfWeek == "토요일" || dayOfWeek == "일요일") return "휴일";
-        else return "평일";
+        throw new NotImplementedException();
     }
 }
