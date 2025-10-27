@@ -3,7 +3,7 @@ namespace LevelTest;
 
 public class Quiz7
 {
-    // Quiz 20: 별 찍기 - 삼각형
+    // Quiz 7: 별 찍기 - 삼각형
     //
     // 문제 설명:
     // 정수 `height`가 주어집니다.

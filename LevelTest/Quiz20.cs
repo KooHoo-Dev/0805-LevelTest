@@ -3,7 +3,7 @@ namespace LevelTest;
 
 public class Quiz20
 {
-    // Quiz 23: 배열에서 홀수 제거하기
+    // Quiz 20: 배열에서 홀수 제거하기
     //
     // 문제 설명:
     // 정수 배열 `numbers`가 주어집니다.

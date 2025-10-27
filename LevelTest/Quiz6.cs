@@ -3,7 +3,7 @@ namespace LevelTest;
 
 public class Quiz6
 {
-    // Quiz 7: 배열의 최댓값 찾기
+    // Quiz 6: 배열의 최댓값 찾기
     //
     // 문제 설명:
     // 정수 배열 `numbers`가 주어집니다.

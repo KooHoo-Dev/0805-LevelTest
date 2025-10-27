@@ -3,7 +3,7 @@ namespace LevelTest;
 
 public class Quiz19
 {
-    // Quiz 21: 배열 회전시키기
+    // Quiz 19: 배열 회전시키기
     //
     // 문제 설명:
     // 정수 배열 `numbers`와 정수 `k`가 주어집니다.
