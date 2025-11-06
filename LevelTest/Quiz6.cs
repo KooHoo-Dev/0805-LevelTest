@@ -3,19 +3,18 @@ namespace LevelTest;
 
 public class Quiz6
 {
-    // Quiz 6: 배열의 최댓값 찾기
+    // Quiz 10: 양수의 개수 세기
     //
     // 문제 설명:
     // 정수 배열 `numbers`가 주어집니다.
-    // 배열의 요소 중에서 가장 큰 값을 찾아 반환하는 함수를 작성하세요.
-    // 만약 배열이 비어있다면 0을 반환하세요.
+    // 배열의 요소 중에서 양수(0보다 큰 수)의 개수를 세어 반환하는 함수를 작성하세요.
     //
     // 예시:
-    // 입력: new int[] { 3, 8, 1, 9, 4 } → 반환: 9
-    // 입력: new int[] { -1, -5, -3 } → 반환: -1
+    // 입력: new int[] { 1, -2, 3, -4, 5 } → 반환: 3
+    // 입력: new int[] { -1, -2, -3 } → 반환: 0
     // 입력: new int[] { } → 반환: 0
 
-    public static int FindMax(int[] numbers)
+    public static int CountPositiveNumbers(int[] numbers)
     {
         throw new NotImplementedException();
     }
