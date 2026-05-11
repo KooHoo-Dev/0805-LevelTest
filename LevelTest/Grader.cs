@@ -89,10 +89,8 @@ public static class Grader
         if (a is null) return b is null;
         if (b is null) return false;
 
-        // 문자열은 IEnumerable이지만 일반 비교 사용
         if (a is string sa && b is string sb) return sa == sb;
 
-        // 배열/리스트 등은 시퀀스 비교
         if (a is IEnumerable ea && b is IEnumerable eb)
         {
             var ia = ea.GetEnumerator();

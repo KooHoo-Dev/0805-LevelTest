@@ -1,22 +1,24 @@
 namespace LevelTest.SetD;
 
-public class Q01_Debug_CompileError
+public class Q01_CompileError
 {
-    // Q1 컴파일 에러 해결
+    // Q1 : 컴파일 에러 해결
     //
     // 문제 설명:
     //    0 ~ input 까지의 모든 정수를 더하여 반환하는 함수를 작성중입니다.
     //   코드를 작성하던 도중, 아래처럼 컴파일 에러가 발생했습니다.
     //   컴파일 에러를 분석하여 코드를 완성하세요.
     //
+    // 규칙:
+    //   - input은 항상 유효한 양수 입니다.
     
     
     public static int Solve(int input)
     {
-        int sum = 0;
-        for (int i = 0; i <= input; i++)
+        int sum = 0f;
+        for (int i == 0; i <= input; i++)
         {
-            sum += i;
+            sum += "i";
         }
 
         return sum;
