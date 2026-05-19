@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -135,7 +135,132 @@ namespace Csharpe_Basic.Study
 
         public void Struct()
         {
+            Student[] students =
+            {
+                new Student("철수",90, 85, 92), // 철수 (평균: 89)
+                new Student("영희",78, 95, 88), // 영희 (평균: 87)
+                new Student("민수",100, 85, 92),// 민수 (평균: 92.33)
+                new Student("낙제",55, 60, 65), // 낙제생 (평균: 60)
+                new Student("우등",98, 90, 88)  // 우등생 (평균: 92)
+            };
 
+            // 1. Struct 인스턴화 하기
+            Student jay = new Student("김재훈", 40, 40, 60);
+
+            // 2. 데이터 접근하기
+            Console.WriteLine($"{jay.Name}, {jay.KoreanScore}, {jay.MathScore}");
+
+            // 3. 특정 데이터 수정하기
+            jay.KoreanScore = 80;
+            Console.WriteLine($"{jay.Name}, {jay.KoreanScore}, {jay.MathScore}");
+
+            // 4. 배열과 반복문 형태로 사용하기
+            
+            // 4.1 특정 데이터 검색 (선형탐색)
+            // Q1 반복문을 이용해서 "우등"이라는 학생의 정보를 출력하세요.
+            for (int i = 0; i < students.Length; ++i)
+            {
+                if (students[i].Name.Equals("우등"))
+                {
+                    // students[i]
+                    string log = students[i].ToString();
+                    Console.WriteLine(log);
+                }
+            }
+
+            // Q2 영희의 수학점수를 90점으로 수정한 후 출력하세요
+            for (int i = 0; i < students.Length; ++i)
+            {
+                if (students[i].Name.Equals("영희"))
+                {
+                    students[i].MathScore = 90;
+                    string log = students[i].ToString();
+                    Console.WriteLine(log);
+                }
+            }
+            Console.WriteLine("=============================");
+
+            Student[] newStudents =
+            {
+                new Student("철수",90, 85, 92), // 철수 (평균: 89)
+                new Student("영희",78, 95, 88), // 영희 (평균: 87)
+                new Student("민수",100, 85, 92),// 민수 (평균: 92.33)
+                new Student("낙제",55, 60, 65), // 낙제생 (평균: 60)
+                new Student("우등",98, 90, 88),  // 우등생 (평균: 92)
+                new Student("재훈", 77,66,99),
+                new Student("건우", 95,70,60),
+                new Student("혜진", 85,85,50),
+                new Student("은빈", 90,85,70),
+                new Student("영호", 80,85,85),
+            };
+
+            Student topStudent = FineTopStudent(newStudents);
+            Console.WriteLine(topStudent.ToString());
+            Console.WriteLine("=============================");
+            // Q1 : 매개변수로 주어진 Student 배열의 점수 총합을 계산하는 함수를 제작하세요
+            int totalScore = SumStudentsTotalScore(newStudents);
+            Console.WriteLine($"Q1 : {totalScore}");
+
+            // Q2 : 매개변수로 주어진 Student 배열의
+            //     과목별 평균점수를 계산하여 출력하는 함수를 제작하세요. (소수점 무시, 이것도 함수로)
+            SubjectAverage(newStudents);
+        }
+
+        // 5. 배열을 이용한 함수 만들어 보기
+        public Student FineTopStudent(Student[] array)
+        {
+            // 가장 우수한 평균 능력을 가진 학생을 찾아서 반환합시다.
+            Student topStudent = array[0];
+            int topTotalScores = SumScores(topStudent);
+
+            for(int i = 1; i < array.Length; ++i)
+            {
+                // SumScores 함수를 이용해서 총합중 최대치를 찾아줍니다.
+                // 만약 현재 topTotalScores보다 array[i]의 Score 총합이 더 크다면
+                if (topTotalScores < SumScores(array[i]))
+                {
+                    topStudent = array[i];
+                    topTotalScores = SumScores(topStudent);
+                }
+            }
+
+            return topStudent;
+        }
+        
+        public int SumScores(Student student)
+        {
+            // 매개변수로 들어온 학생의 점수 변수들을 합해서 반환합니다.
+            return student.KoreanScore + student.EnglishScore + student.MathScore;
+        }
+
+        public int SumStudentsTotalScore(Student[] array)
+        {
+            int totalScore = 0;
+            for(int i = 0; i < array.Length; ++i)
+            {
+                totalScore += SumScores(array[i]);
+            }
+            return totalScore;
+        }
+
+        public void SubjectAverage(Student[] array)
+        {
+            int koreanTotal = 0;
+            int englishTotal = 0;
+            int mathTotal = 0;
+            // 코드 작성~
+
+            for(int i = 0; i < array.Length; ++i)
+            {
+                koreanTotal += array[i].KoreanScore;
+                englishTotal += array[i].EnglishScore;
+                mathTotal += array[i].MathScore;
+            }
+
+            // 출력 코드~
+            Console.WriteLine($"한국어 평균 {koreanTotal / array.Length}");
+            Console.WriteLine($"영어 평균 {englishTotal / array.Length}");
+            Console.WriteLine($"수학 평균 {mathTotal / array.Length}");
         }
     }
 }
